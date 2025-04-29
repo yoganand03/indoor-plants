@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indoor Plants</title>
+    <style>
+        /* Basic layout and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .filter-section {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .filter-section label {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .filter-section select {
+            font-size: 1rem;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .plants-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .plant-item {
+            display: inline-block;
+            margin: 15px;
+            width: 300px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .plant-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .plant-item h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .plant-item p {
+            padding: 10px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Hidden class for filtering */
+        .hidden {
+            display: none;
+        }
+
+        /* Hover effect for plant items */
+        .plant-item:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        h1{
+            background-color: green;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Indoor Plants</h1>
+
+    <section class="plants-gallery">
+        <!-- Plant Item 1 -->
+        <div class="plant-item low-maintenance" id="plant1">
+            <img src="./assets/fiddle leaf.jpeg" alt="Plant 1">
+            <h3>Fiddle Leaf Fig</h3>
+            <p>Known for its large, glossy leaves, perfect for bright spots indoors.</p>
+            <b>₹99</b>
+        </div>
+
+        <!-- Plant Item 2 -->
+        <div class="plant-item air-purifying" id="plant2">
+            <img src="./assets/snake plant.jpeg" alt="Plant 2">
+            <h3>Snake Plant</h3>
+            <p>Very low maintenance, ideal for beginners.</p>
+            <b>₹184</b>
+        </div>
+
+        <!-- Plant Item 3 -->
+        <div class="plant-item flowering" id="plant3">
+            <img src="./assets/peace lily.jpeg" alt="Plant 3">
+            <h3>Peace Lily</h3>
+            <p>Beautiful flowering plant that purifies the air.</p>
+            <b>₹89</b>
+        </div>
+
+        <!-- Add 47 more plant items below -->
+        <div class="plant-item low-maintenance" id="plant4">
+            <img src="./assets/spider plant.jpeg" alt="Plant 4">
+            <h3>Spider Plant</h3>
+            <p>A hardy plant that grows well in indirect light.</p>
+           <b>₹89</b>
+        </div>
+
+        <div class="plant-item air-purifying" id="plant5">
+            <img src="./assets/areca palm.jpeg" alt="Plant 5">
+            <h3>Areca Palm</h3>
+            <p>Helps to purify the air while adding a tropical look to your space.</p>
+            <b>₹30</b>
+        </div>
+
+        <div class="plant-item flowering" id="plant6">
+            <img src="./assets/orchid.jpeg" alt="Plant 6">
+            <h3>Orchid</h3>
+            <p>Elegant flowering plant, needs minimal care to thrive.</p>
+            <b>₹219</b>
+        </div>
+
+        <!-- More plant items (repeat the structure as needed) -->
+        <div class="plant-item low-maintenance" id="plant7">
+            <img src="./assets/zz plant.jpeg" alt="Plant 7">
+            <h3>ZZ Plant</h3>
+            <p>Extremely low maintenance, ideal for low-light spaces.</p>
+            <b>₹449</b>
+        </div>
+
+        <div class="plant-item air-purifying" id="plant8">
+            <img src="./assets/golden pothos.jpeg" alt="Plant 8">
+            <h3>Golden Pothos</h3>
+            <p>Great at purifying the air and easy to grow.</p>
+            <b>₹300</b>
+        </div>
+
+        <section class="plants-gallery">
+            <!-- Plant Item 10 -->
+            <div class="plant-item low-maintenance" id="plant1">
+                <img src="./assets/aloe vera.jpeg"id="Plant 1">
+                <h3>Aloevera</h3>
+                <p>This spiky, low-maintenance and the beauty and health benefits.</p>
+                <b>₹131</b>
+            </div>
+    
+            <!-- Plant Item 2 -->
+            <div class="plant-item air-purifying" id="plant2">
+                <img src="assets/basil.jpeg" alt="Plant 2">
+                <h3>Basil</h3>
+                <p>It's a culinary herb of the family lamiaceace.</p>
+                <B>₹158</B>
+            </div>
+    
+            <!-- Plant Item 3 -->
+            <div class="plant-item flowering" id="plant3">
+                <img src="./assets/african voilet.jpeg" alt="Plant 3">
+                <h3>African Voilet</h3>
+                <p>Its sweet purple blooms that appear several times a year.</p>
+                <b>₹314</b>
+            </div>
+    
+            <!-- Add 47 more plant items below -->
+            <div class="plant-item low-maintenance" id="plant4">
+                <img src="./assets/jade plant.jpeg" alt="Plant 4">
+                <h3>Jade Plant</h3>
+                <p>Succulents jade plants has been a fan favorite for decors.</p>
+                <b>₹185</b>
+            </div>
+    
+            <div class="plant-item air-purifying" id="plant5">
+                <img src="./assets/rubber plant.jpeg" alt="Plant 5">
+                <h3>Rubber Plant</h3>
+                <p>This tropical plant makes a great houseplant with striking leaves.</p>
+                <b>₹90</b>
+            </div>
+    
+            <div class="plant-item flowering" id="plant6">
+                <img src="./assets/dumb cane.jpeg" alt="Plant 6">
+                <h3>Dumb Cane</h3>
+                <p>Dumb cane plants intriguing, patterned foliage, and their relatively easy-care nature.</p>
+                <b>₹299</b>
+            </div>
+    
+            <!-- More plant items (repeat the structure as needed) -->
+            <div class="plant-item low-maintenance" id="plant7">
+                <img src="./assets/monstera deliciosa.jpeg" alt="Plant 7">
+                <h3>Monstera Deliciosa</h3>
+                <p>One of the stars of the past few years, the monstera is beloved for its pretty leaves.</p>
+                <b>₹199</b> 
+            </div>
+    
+            <div class="plant-item air-purifying" id="plant8">
+                <img src="./assets/rosemary.jpeg" alt="Plant 8">
+                <h3>Rosemary</h3>
+                <p>This perennial herb can be grown on a sunny windowsill.</p>
+                <b>₹75</b>
+            </div>
+
+            <section class="plants-gallery">
+                <!-- Plant Item 1 -->
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="./assets/umberella plant.jpeg" alt="Plant 1">
+                    <h3>Umberella Plant</h3>
+                    <p>This pretty tropical plant can grow quickly, so be ready to repot.</p>
+                    <b>₹89</b>
+                </div>
+        
+                <!-- Plant Item 2 -->
+                <div class="plant-item air-purifying" id="plant2">
+                    <img src="./assets/money tree.jpeg" alt="Plant 2">
+                    <h3>Money Tree</h3>
+                    <p>This special plant is known to bring good luck and fortune into your life.</p>
+                    <b>₹157</b>
+                </div>
+        
+                <!-- Plant Item 3 -->
+                <div class="plant-item flowering" id="plant3">
+                    <img src="./assets/lucky bambo.jpeg" alt="Plant 3">
+                    <h3>Lucky Bambo</h3>
+                    <p>Lucky bamboo are beloved for being a way to bring good luck into your home.</p>
+                    <b>₹249</b>
+                </div>
+        
+                <!-- Add 47 more plant items below -->
+                <div class="plant-item low-maintenance" id="plant4">
+                    <img src="./assets/eng ivy.jpeg" alt="Plant 4">
+                    <h3>English Ivy</h3>
+                    <p>Ivy's trailing behavior makes it a perfect choice for a hanging plant.</p>
+                    <b>₹219</b>
+                </div>
+        
+                <div class="plant-item air-purifying" id="plant5">
+                    <img src="./assets/boston fern.jpeg" alt="Plant 5">
+                    <h3>Boston Fern</h3>
+                    <p>Boston ferns thrive on humidity and water, making them an ideal plant for your bathroom.</p>
+                    <b>₹132</b>
+                </div>
+        
+                <div class="plant-item flowering" id="plant6">
+                    <img src="./assets/pilea.jpeg" alt="Plant 6">
+                    <h3>Pilea</h3>
+                    <p>This popular houseplant's rounded leaves have earned it the nicknames Chinese money plant or pancake plant.</p>
+                    <b>₹153</b>
+                </div>
+        
+                <!-- More plant items (repeat the structure as needed) -->
+                <div class="plant-item low-maintenance" id="plant7">
+                    <img src="./assets/bromeliads.jpeg" alt="Plant 7">
+                    <h3>Bromeliads</h3>
+                    <p>Bromeliads are super popular, thanks to their colorful blooms and minimal needs.</p>
+                    <b>₹30</b>
+                </div>
+        
+                <div class="plant-item air-purifying" id="plant8">
+                    <img src="./assets/string of pearls.jpeg" alt="Plant 8">
+                    <h3>string of pearls</h3>
+                    <p>This pretty trailing succulent is a perfect addition to a bookshelf or as a hanging plant.</p>
+                    <b>₹164</b>
+                </div>
+
+                <div class="plant-item air-purifying" id="plant8">
+                    <img src="./assets/ponytail palm.jpeg" alt="Plant 8">
+                    <h3>Ponytail Palm</h3>
+                    <p>These are slow growing, and can eventually become tree-sized, even indoors.</p>
+                    <b>₹162</b>
+                </div>
+
+                <div class="plant-item air-purifying" id="plant8">
+                    <img src="./assets/oyster plant.jpeg" alt="Plant 8">
+                    <h3>Oyster Plant</h3>
+                    <p>Its colourful leaves and stature, these green-purple plants can be grow outdoors or indoors.</p>
+                    <b>₹120</b>
+                </div>
+
+                <div class="plant-item air-purifying" id="plant8">
+                    <img src="./assets/kalanchoe.jpeg" alt="Plant 8">
+                    <h3>Kalanchoe</h3>
+                    <p>If you want some pretty biomms for your palnt collection,look no further.</p>
+                    <b>₹173</b>
+                </div>
+               
+                <div class="plant-item air-purifying" id="plant8">
+                    <img src="./assets/cactus.jpeg" alt="Plant 8">
+                    <h3>Cactus</h3>
+                    <p>Cacti and succlents have become a common addition to most plant collectoin.</p>
+                    <b>₹69</b>
+                </div>
+
+        <!-- Continue until you have 50 plant items -->
+        <!-- Remember to alternate classes between low-maintenance, air-purifying, and flowering plants -->
+        
+    </section>
+
+    <script>
+        // JavaScript to handle the filter functionality
+        const filterSelect = document.getElementById('plant-filter');
+        const plantItems = document.querySelectorAll('.plant-item');
+
+        // Event listener for the filter dropdown change
+        filterSelect.addEventListener('change', function() {
+            const filterValue = filterSelect.value;
+
+            // Loop through all plant items and apply the filter
+            plantItems.forEach(item => {
+                if (filterValue === 'all') {
+                    item.classList.remove('hidden');
+                } else if (item.classList.contains(filterValue)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
